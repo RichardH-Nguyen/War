@@ -31,8 +31,8 @@ class War(Game):
 
     def StartGame(self):
         for playerID in range(0, self.numberOfPlayers):
-            cardForPlayer = self.deckOfCards.GetRandomCard() #Deal card
-            newPlayer = Player(playerID, cardForPlayer) #Save player and card
+            cardForPlayer = self.deckOfCards.GetRandomCard()  # Deal card
+            newPlayer = Player(playerID, cardForPlayer)  # Save player and card
             self.players.append(newPlayer)
         self.DecideWinner()
 
