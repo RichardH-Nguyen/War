@@ -35,12 +35,15 @@ class War(Game):
         self.DecideWinner()
 
     def DecideWinner(self):
-        winningID = self.players [0] #Choose potential winner
+        winningID = self.players[0]  # Choose potential winner
+        print("Player 0 Card: " + str(winningID.cardForPlayer))
+        print("Player 1 Card: " + str(self.players[1].cardForPlayer))
         for playerID in self.players:
-            if(playerID.cardForPlayer[1] > winningID.cardForPlayer[1]):
-                winningID = playerID #find highest card
-        print ("The winner is player " + str(winningID.playerID)+ "!")
-        print ("The winning card is the " + str(winningID.cardForPlayer[1]) + " of " + str(winningID.cardForPlayer[0])+ ".")
+            if (playerID.cardForPlayer[1] > winningID.cardForPlayer[1]):
+                winningID = playerID  # find highest card
+        print("The winner is player " + str(winningID.playerID) + "!")
+        print("The winning card is the " + str(winningID.cardForPlayer[1]) + " of " + str(
+            winningID.cardForPlayer[0]) + ".")
 
 
 if __name__=="__main__":
